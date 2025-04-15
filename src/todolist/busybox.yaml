@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: busybox-curl
+spec:
+  containers:
+    - name: busyboox
+      image: ikulyk404/busyboxplus
+      ports:
+        - name: busybox
+          containerPort: 8080

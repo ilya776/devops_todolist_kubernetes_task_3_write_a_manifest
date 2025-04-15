@@ -78,3 +78,9 @@ def add_todolist(request):
             return render(request, "lists/overview.html", {"form": form})
 
     return redirect("lists:index")
+@app.route("/ready")
+def readiness(request):
+    return JsonResponse({"status": "ready"})
+@app.route("/live")
+def liveness(request):
+    return JsonResponse({"status": "alive"})
